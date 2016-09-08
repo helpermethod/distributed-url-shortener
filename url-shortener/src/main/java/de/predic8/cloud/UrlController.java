@@ -18,7 +18,7 @@ public class UrlController {
 		return Long.toString(entity.getId(), 36);
 	}
 
-	@RequestMapping(value = "/{hash}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{base36}", method = RequestMethod.GET)
 	public String unShorten(@PathVariable("base36") String base36) {
 		return urlRepository.findOne(Long.valueOf(base36, 36)).getUrl();
 	}

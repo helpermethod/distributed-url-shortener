@@ -14,6 +14,9 @@ public class Url {
 	private Long id;
 	private String url;
 
+	private Url() {
+	}
+
 	public Url(String url) {
 		this.url = url;
 	}
